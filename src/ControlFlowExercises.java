@@ -1,5 +1,4 @@
 public class ControlFlowExercises {
-
     public static void main(String[] args) {
 
 //        int i = 5;
@@ -18,6 +17,22 @@ public class ControlFlowExercises {
 //        for (long i = 2L; i < 1000000; i *= i) {
 //            System.out.println(j);
 //        }
-    }
 
+//        for (int i = 1; i <= 100; i++) {
+//            String j = "";
+//            if (i % 3 == 0) {
+//                j += "Fizz";
+//            }
+//            if (i % 5 == 0) {
+//                j += "Buzz";
+//            }
+//            if (j.equals("")) {
+//                j = Integer.toString(i);
+//            }
+//            System.out.println(j);
+//        }
+
+
+
+    }
 }
