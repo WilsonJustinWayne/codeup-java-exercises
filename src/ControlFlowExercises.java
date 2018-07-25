@@ -47,17 +47,69 @@ public class ControlFlowExercises {
 //        5      | 25      | 125
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("What number would you like to go up to? ");
-        int input = sc.nextInt();
-        System.out.println("\nHere is your table!");
-        System.out.println();
-        String leftAlignFormat = " %-6s | %-7s | %-6s %n";
+//        boolean keepGoing = true;
+//        while (keepGoing) {
+//            System.out.print("What number would you like to go up to? ");
+//            int input = sc.nextInt();
+//            System.out.println("\nHere is your table!");
+//            System.out.println();
+//            String leftAlignFormat = " %-6s | %-7s | %-6s %n";
+//            System.out.format(" number | squared | cubed%n");
+//            System.out.format("--------|---------|------%n");
+//            for (int i = 1; i <= input; i++) {
+//                System.out.format(leftAlignFormat, i, Math.round(Math.pow(i, 2)), Math.round(Math.pow(i, 3)));
+//            }
+//            System.out.print("Keep going? [y/n]: ");
+//            System.out.println();
+//            String secondInput = sc.next();
+//            if (secondInput.equals("y")) {
+//                keepGoing = true;
+//            } else {
+//                keepGoing = false;
+//            }
+//        }
 
-        System.out.format(" number | squared | cubed%n");
-        System.out.format("--------|---------|------%n");
-        for (int i = 1; i <= input; i++) {
-            System.out.format(leftAlignFormat, i, Math.round(Math.pow(i, 2)), Math.round(Math.pow(i, 3)));
+        boolean keepGoing = true;
+        while (keepGoing) {
+            System.out.print("Please enter grade value: ");
+            int gradeInput = sc.nextInt();
+            String letterGrade = "";
+            if (gradeInput >= 97) {
+                letterGrade = "A+";
+            } else if (gradeInput >= 93) {
+                letterGrade = "A";
+            } else if (gradeInput >= 90) {
+                letterGrade = "A-";
+            } else if (gradeInput >= 87) {
+                letterGrade = "B+";
+            } else if (gradeInput >= 83) {
+                letterGrade = "B";
+            } else if (gradeInput >= 80) {
+                letterGrade = "B-";
+            } else if (gradeInput >= 77) {
+                letterGrade = "C+";
+            } else if (gradeInput >= 73) {
+                letterGrade = "C";
+            } else if (gradeInput >= 70) {
+                letterGrade = "C-";
+            } else if (gradeInput >= 67) {
+                letterGrade = "D+";
+            } else if (gradeInput >= 63) {
+                letterGrade = "D";
+            } else if (gradeInput >= 60) {
+                letterGrade = "D-";
+            } else {
+                letterGrade = "F";
+            }
+            System.out.println("Your letter grade: " + letterGrade + "\n");
+            System.out.print("Keep going? [y/n]: ");
+            System.out.println();
+            String secondInput = sc.next();
+            if (secondInput.equals("y")) {
+                keepGoing = true;
+            } else {
+                keepGoing = false;
+            }
         }
-
     }
 }
