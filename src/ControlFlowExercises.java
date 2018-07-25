@@ -73,7 +73,7 @@ public class ControlFlowExercises {
         while (keepGoing) {
             System.out.print("Please enter grade value: ");
             int gradeInput = sc.nextInt();
-            String letterGrade = "";
+            String letterGrade;
             if (gradeInput >= 97) {
                 letterGrade = "A+";
             } else if (gradeInput >= 93) {
