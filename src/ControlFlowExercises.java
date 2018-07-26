@@ -3,22 +3,22 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-//        int i = 5;
-//        while (i <= 15) {
-//            System.out.printf("%s ", i);
-//            i++;
-//        }
-//        System.out.println();
+        int i = 5;
+        while (i <= 15) {
+            System.out.printf("%s ", i);
+            i++;
+        }
+        System.out.println();
 
-//        long i = 2L;
-//        do {
-//            System.out.println(i);
-//            i *= i;
-//        } while (i < 1000000);
+        long longNumber1 = 2L;
+        do {
+            System.out.println(i);
+            longNumber1 *= longNumber1;
+        } while (longNumber1 < 1000000);
 
-//        for (long i = 2L; i < 1000000; i *= i) {
+        for (long longNumber2 = 2L; longNumber2 < 1000000; longNumber2 *= longNumber2) {
 //            System.out.println(j);
-//        }
+        }
 
 //        for (int i = 1; i <= 100; i++) {
 //            String j = "";
@@ -34,43 +34,32 @@ public class ControlFlowExercises {
 //            System.out.println(j);
 //        }
 
-//        What number would you like to go up to? 5
-//
-//        Here is your table!
-//
-//        number | squared | cubed
-//        ------ | ------- | -----
-//        1      | 1       | 1
-//        2      | 4       | 8
-//        3      | 9       | 27
-//        4      | 16      | 64
-//        5      | 25      | 125
 
         Scanner sc = new Scanner(System.in);
-//        boolean keepGoing = true;
-//        while (keepGoing) {
-//            System.out.print("What number would you like to go up to? ");
-//            int input = sc.nextInt();
-//            System.out.println("\nHere is your table!");
-//            System.out.println();
-//            String leftAlignFormat = " %-6s | %-7s | %-6s %n";
-//            System.out.format(" number | squared | cubed%n");
-//            System.out.format("--------|---------|------%n");
-//            for (int i = 1; i <= input; i++) {
-//                System.out.format(leftAlignFormat, i, Math.round(Math.pow(i, 2)), Math.round(Math.pow(i, 3)));
-//            }
-//            System.out.print("Keep going? [y/n]: ");
-//            System.out.println();
-//            String secondInput = sc.next();
-//            if (secondInput.equals("y")) {
-//                keepGoing = true;
-//            } else {
-//                keepGoing = false;
-//            }
-//        }
-
         boolean keepGoing = true;
         while (keepGoing) {
+            System.out.print("What number would you like to go up to? ");
+            int input = sc.nextInt();
+            System.out.println("\nHere is your table!");
+            System.out.println();
+            String leftAlignFormat = " %-6s | %-7s | %-6s %n";
+            System.out.format(" number | squared | cubed%n");
+            System.out.format("--------|---------|------%n");
+            for (int k = 1; k <= input; k++) {
+                System.out.format(leftAlignFormat, k, Math.round(Math.pow(k, 2)), Math.round(Math.pow(k, 3)));
+            }
+            System.out.print("Keep going? [y/n]: ");
+            System.out.println();
+            String secondInput = sc.next();
+            if (secondInput.equals("y")) {
+                keepGoing = true;
+            } else {
+                keepGoing = false;
+            }
+        }
+
+        boolean keepGoing2 = true;
+        while (keepGoing2) {
             System.out.print("Please enter grade value: ");
             int gradeInput = sc.nextInt();
             String letterGrade;
@@ -106,9 +95,9 @@ public class ControlFlowExercises {
             System.out.println();
             String secondInput = sc.next();
             if (secondInput.equals("y")) {
-                keepGoing = true;
+                keepGoing2 = true;
             } else {
-                keepGoing = false;
+                keepGoing2 = false;
             }
         }
     }
