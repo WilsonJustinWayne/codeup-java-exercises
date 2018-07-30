@@ -24,7 +24,7 @@ public class Input {
 
     private int getInt(int min, int max) {
         int input = scanner.nextInt();
-        if (input < min || input > max) {
+        if (min < input && input > max) {
             return input;
         }
         System.out.println("Input is not within the correct range");
