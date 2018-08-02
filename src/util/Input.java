@@ -2,11 +2,12 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     private String getString() {
         return scanner.nextLine();
     }
+
     public String getString(String prompt) {
         System.out.println(prompt);
         return getString();
@@ -17,7 +18,8 @@ public class Input {
         // checks for y, yes, sure, and ok
         return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("sure") || input.equalsIgnoreCase("ok"));
     }
-    public boolean yesNo(String prompt){
+
+    public boolean yesNo(String prompt) {
         System.out.println(prompt);
         return yesNo();
     }
@@ -30,6 +32,7 @@ public class Input {
         System.out.println("Input is not within the correct range");
         return getInt(min, max);
     }
+
     public int getInt(int min, int max, String prompt) {
         System.out.println(prompt);
         return getInt(min, max);
@@ -38,8 +41,9 @@ public class Input {
     private int getInt() {
         return scanner.nextInt();
     }
+
     public int getInt(String prompt) {
-        System.out.println(prompt);
+        System.out.print(prompt + "\n");
         return getInt();
     }
 
@@ -67,4 +71,3 @@ public class Input {
     }
 
 }
-

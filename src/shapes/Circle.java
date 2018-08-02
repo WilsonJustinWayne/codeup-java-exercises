@@ -7,15 +7,19 @@ public class Circle {
     public Circle(double radius) {
         this.radius = radius;
     }
+
     public double getArea() {
         return Math.PI * Math.pow(this.radius, 2);
     }
-    public double getCircumference(){
+
+    public double getCircumference() {
         return 2 * Math.PI * radius;
     }
+
     public void circlesCreated() {
-        this.count++;
+        count++;
     }
+
     public static int getCount() {
         return count;
     }
